@@ -3,10 +3,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-
+import { ThemeProvider } from 'styled-components';
+import themeObject from './theme/index';
 import { worker } from "./mocks/browser";
 worker.start();
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <ThemeProvider theme={themeObject}>
+        <App />
+    </ThemeProvider>,
+    document.getElementById("root")
+);
 
-//testing codegrade connection to git
+
