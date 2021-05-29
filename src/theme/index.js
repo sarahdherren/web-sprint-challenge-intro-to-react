@@ -1,9 +1,11 @@
 const themeObject = {
 
-    backgroundImage: "url('../images/stardust.png')",
     mainColor: "#F7E61E",
-    accentColor: "#EFEFEF",
-    glowColor: "#036EF5"
+    accentColor: "#d2d7dd",
+    glowColor: "#036EF5",
+    headerFont: "'Days One', sans-serif",
+    contentFont: "'Jura', sans-serif"
+    
 
 };
 
