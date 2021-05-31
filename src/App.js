@@ -28,6 +28,8 @@ const StyledMainContainer = styled.div`
   @media (max-height: 800px) {
     top: -50vh;
     padding-bottom: 50px;
+    height: 65vh;
+    width: 75%;
   }
 `
 const StyledButton = styled.button `
