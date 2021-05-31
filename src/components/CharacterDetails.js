@@ -10,13 +10,18 @@ const CharacterDetails = ({characterUrl, closeStats}) => {
 
     const[stats, setStats] = useState('')
 
+    const position = 4;
+    const letter = 's';
+    const secureCharUrl = [characterUrl.slice(0, position), letter, characterUrl.slice(position)].join('');
+    console.log(secureCharUrl);
+
     useEffect(() => {
-        axios.get(characterUrl)
+        axios.get(secureCharUrl)
             .then(res => {
                 setStats(res.data)
                 console.log(res)})
             .catch(err => console.log(err))
-            }, [characterUrl])
+            }, [secureCharUrl])
     
                 
   return(              
