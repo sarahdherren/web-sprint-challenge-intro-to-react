@@ -41,6 +41,7 @@ const StyledButton = styled.button `
     outline: none;
     border-color: ${props => props.theme.glowColor};
     box-shadow: 0 0 10px ${props => props.theme.glowColor};
+    background-color: ${props => props.theme.accentColor};
 `
 
 const StyledImage = styled.img`
