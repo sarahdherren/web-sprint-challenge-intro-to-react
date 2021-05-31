@@ -1,8 +1,8 @@
 // Write your Character component here
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { StyledMainContainer, Styledh1} from '../App';
-import { StyledContent, StyledButton } from './Character';
+import { StyledMainContainer, Styledh1, StyledButton} from '../App';
+import { StyledContent } from './Character';
 
 //opens modal with current selected character 
 
@@ -25,7 +25,7 @@ const CharacterDetails = ({characterUrl, closeStats}) => {
                     <StyledContent>
                         <p>Height: {stats.height}</p>
                         <p>Weight: {stats.mass}</p>
-                        <p>{stats.hair_color === ('n/a' || 'none') ? null : `Hair Color: ${stats.hair_color}`}</p>
+                        <p>Hair: {stats.hair_color}</p>
                         <p>Skin Color: {stats.skin_color}</p>
                         <p>Eye Color: {stats.eye_color}</p>
                         <p>Birth Year: {stats.birth_year}</p>
