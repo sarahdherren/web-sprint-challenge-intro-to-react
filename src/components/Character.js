@@ -5,10 +5,12 @@ import { StyledButton } from '../App';
 const StyledContent = styled.div`
     font-family: ${props => props.theme.contentFont};
     font-weight: 900;
-    padding: 10px;
+    font-size: .85rem;
+    padding: 1%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
+    
     
 `
 // displays list of characters from api
@@ -24,7 +26,6 @@ const Character = ({openStats, character, closeModal}) => {
         <div>
         <StyledContent>
             {character.name}
-            {character.index}
             <StyledButton onClick={() => clickHandler()}>
                 stats
             </StyledButton>

@@ -14,12 +14,20 @@ const StyledMainContainer = styled.div`
   top: -28vh;
   z-index: 2;
   background-color: ${props => props.theme.accentColor};
-  border: solid black 1px;
+  border: double #011524 20px;
   border-radius: 80px 0px 80px 0px;
-  max-width: 45%;
+  width: 75%;
+  height: auto;
   margin: auto;
-  padding: 0px 30px 30px;
-  
+  padding: 0% 1% 1%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  @media (max-height: 800px) {
+    top: -50vh;
+    padding-bottom: 50px;
+  }
 `
 const StyledButton = styled.button `
     max-width: 40%;
@@ -46,6 +54,13 @@ const Styledh1 = styled.h1 `
   color: ${props => props.theme.mainColor};
   font-family: ${props => props.theme.headerFont};
   text-shadow: 2px 2px 5px black;
+  font-size: 4.5rem;
+`
+const Styledh2 = styled.h2 `
+  color: ${props => props.theme.mainColor};
+  font-family: ${props => props.theme.headerFont};
+  text-shadow: 2px 2px 5px #011524;
+  font-size: 1.5rem;
 `
 
 
@@ -97,7 +112,7 @@ const App = () => {
       }
       { !wait && 
         <StyledMainContainer> 
-        <Styledh1>Characters</Styledh1>
+        <Styledh2>Characters</Styledh2>
         { characterList.map((character) => {
           return (
             <Character 
@@ -118,4 +133,4 @@ const App = () => {
 }
 
 export default App
-export { StyledMainContainer, Styledh1, StyledButton };
+export { StyledMainContainer, Styledh1, StyledButton, Styledh2 };

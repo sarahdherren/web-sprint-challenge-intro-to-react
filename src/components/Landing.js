@@ -20,9 +20,9 @@ const StyledStarWars = styled.section`
     flex-flow: column nowrap;
     justify-content: center;
     height: 800px;
-    font-size: 300%;
+    font-size: 400%;
     font-weight: 600;
-    letter-spacing: 6px;
+    letter-spacing: 15px;
     line-height: 200%;
     perspective: 400px;
     text-align: justify;
@@ -39,7 +39,7 @@ const StyledCrawl = styled.div`
     animation: ${Scroll} 90s linear;
 `
 const StyledTitle = styled.div`
-    font-size: 90%;
+    font-size: 3.5rem;
     text-align: center;
     margin: 0 0 100px;
 `
