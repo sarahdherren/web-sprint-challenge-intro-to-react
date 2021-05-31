@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import reactLogo from './images/logo192.png';
 import styled from 'styled-components';
 import axios from 'axios';
 import uuid from 'react-uuid';
@@ -45,10 +46,15 @@ const StyledButton = styled.button `
 `
 
 const StyledImage = styled.img`
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  left: 25%;
   width: 50%;
   height: auto;
+  @media (max-height: 800px) {
+    width: 20%;
+    left: 15%;
+    top: 2.5%;
+  }
 `
 
 const Styledh1 = styled.h1 `
@@ -63,7 +69,19 @@ const Styledh2 = styled.h2 `
   text-shadow: 2px 2px 5px #011524;
   font-size: 1.5rem;
 `
-
+const StyledTopImage = styled.img `
+  position: relative;
+  top: 5vh;
+  z-index: 2;
+  width: 20%;
+  height: auto;
+  opacity: .8;
+  @media (max-height: 800px) {
+    width: 8%;
+    left: 30vw;
+    top: 3.5vh;
+  } 
+`
 
 
 const App = () => {
@@ -99,12 +117,13 @@ const App = () => {
     setScrollStart(true)
     setTimeout(function() {
       setScrollStart(false)
-      setWait(false);}, 70000)
+      setWait(false);}, 65000)
   }
 
   return (
     <div className="App">
       <div className='fade'>
+      <StyledTopImage className='App-logo' alt='react' src={reactLogo} />
       <StyledImage alt='star wars' src="http://imageshack.com/a/img922/3783/oyvsRd.png" />
       </div>
       {!scrollStart && <StyledButton onClick={() => handlePlay()}>Click here to begin...</StyledButton>}
